@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		419265162014238600DD2EAA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 419265152014238600DD2EAA /* Default-568h@2x.png */; };
 		41C058FD2011927E006B2087 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C058FC2011927E006B2087 /* AppDelegate.swift */; };
-		41C058FF2011927E006B2087 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C058FE2011927E006B2087 /* ViewController.swift */; };
+		41C058FF2011927E006B2087 /* MemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C058FE2011927E006B2087 /* MemeController.swift */; };
 		41C059022011927E006B2087 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C059002011927E006B2087 /* Main.storyboard */; };
 		41C059042011927E006B2087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C059032011927E006B2087 /* Assets.xcassets */; };
 		41C059072011927E006B2087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C059052011927E006B2087 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		41C058F92011927E006B2087 /* UIImagePickerPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImagePickerPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		419265152014238600DD2EAA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		41C058F92011927E006B2087 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C058FC2011927E006B2087 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41C058FE2011927E006B2087 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41C058FE2011927E006B2087 /* MemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeController.swift; sourceTree = "<group>"; };
 		41C059012011927E006B2087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41C059032011927E006B2087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41C059062011927E006B2087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,7 +40,8 @@
 		41C058F02011927E006B2087 = {
 			isa = PBXGroup;
 			children = (
-				41C058FB2011927E006B2087 /* UIImagePickerPractice */,
+				419265152014238600DD2EAA /* Default-568h@2x.png */,
+				41C058FB2011927E006B2087 /* MemeMe */,
 				41C058FA2011927E006B2087 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +49,30 @@
 		41C058FA2011927E006B2087 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41C058F92011927E006B2087 /* UIImagePickerPractice.app */,
+				41C058F92011927E006B2087 /* MemeMe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41C058FB2011927E006B2087 /* UIImagePickerPractice */ = {
+		41C058FB2011927E006B2087 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
 				41C058FC2011927E006B2087 /* AppDelegate.swift */,
-				41C058FE2011927E006B2087 /* ViewController.swift */,
+				41C058FE2011927E006B2087 /* MemeController.swift */,
 				41C059002011927E006B2087 /* Main.storyboard */,
 				41C059032011927E006B2087 /* Assets.xcassets */,
 				41C059052011927E006B2087 /* LaunchScreen.storyboard */,
 				41C059082011927E006B2087 /* Info.plist */,
 			);
-			path = UIImagePickerPractice;
+			path = MemeMe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41C058F82011927E006B2087 /* UIImagePickerPractice */ = {
+		41C058F82011927E006B2087 /* MemeMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41C0590B2011927E006B2087 /* Build configuration list for PBXNativeTarget "UIImagePickerPractice" */;
+			buildConfigurationList = 41C0590B2011927E006B2087 /* Build configuration list for PBXNativeTarget "MemeMe" */;
 			buildPhases = (
 				41C058F52011927E006B2087 /* Sources */,
 				41C058F62011927E006B2087 /* Frameworks */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = UIImagePickerPractice;
+			name = MemeMe;
 			productName = UIImagePickerPractice;
-			productReference = 41C058F92011927E006B2087 /* UIImagePickerPractice.app */;
+			productReference = 41C058F92011927E006B2087 /* MemeMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 41C058F42011927E006B2087 /* Build configuration list for PBXProject "UIImagePickerPractice" */;
+			buildConfigurationList = 41C058F42011927E006B2087 /* Build configuration list for PBXProject "MemeMe" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41C058F82011927E006B2087 /* UIImagePickerPractice */,
+				41C058F82011927E006B2087 /* MemeMe */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41C059072011927E006B2087 /* LaunchScreen.storyboard in Resources */,
+				419265162014238600DD2EAA /* Default-568h@2x.png in Resources */,
 				41C059042011927E006B2087 /* Assets.xcassets in Resources */,
 				41C059022011927E006B2087 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41C058FF2011927E006B2087 /* ViewController.swift in Sources */,
+				41C058FF2011927E006B2087 /* MemeController.swift in Sources */,
 				41C058FD2011927E006B2087 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +280,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52SRVZM9XB;
-				INFOPLIST_FILE = UIImagePickerPractice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MemeMe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ravikumar.UIImagePickerPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ravikumar.MemeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -291,9 +295,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52SRVZM9XB;
-				INFOPLIST_FILE = UIImagePickerPractice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MemeMe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ravikumar.UIImagePickerPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ravikumar.MemeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41C058F42011927E006B2087 /* Build configuration list for PBXProject "UIImagePickerPractice" */ = {
+		41C058F42011927E006B2087 /* Build configuration list for PBXProject "MemeMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41C059092011927E006B2087 /* Debug */,
@@ -312,7 +316,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41C0590B2011927E006B2087 /* Build configuration list for PBXNativeTarget "UIImagePickerPractice" */ = {
+		41C0590B2011927E006B2087 /* Build configuration list for PBXNativeTarget "MemeMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41C0590C2011927E006B2087 /* Debug */,
