@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-BL-6lP">
-                                <rect key="frame" x="8" y="56" width="359" height="542"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-BL-6lP">
+                                <rect key="frame" x="0.0" y="56" width="375" height="567"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="9pb-Ug-dDC">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -47,7 +47,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tkx-s7-90F">
-                                <rect key="frame" x="37" y="523" width="300" height="30"/>
+                                <rect key="frame" x="37" y="548" width="300" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMP-d3-WDm">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
@@ -64,22 +64,17 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Hiq-fh-lfO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="36"/>
                                 <items>
-                                    <barButtonItem style="plain" id="XCI-j9-Rbq">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zSJ-Rh-uK3">
-                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Share"/>
-                                            <connections>
-                                                <action selector="shareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYy-eD-DmF"/>
-                                            </connections>
-                                        </button>
+                                    <barButtonItem style="plain" systemItem="action" id="orx-vN-j2g">
+                                        <connections>
+                                            <action selector="shareImage:" destination="BYZ-38-t0r" id="Ifr-jg-CXL"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QRk-38-Rsv"/>
                                     <barButtonItem style="plain" id="9wL-0F-hKO">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gIc-cb-ZgZ">
-                                            <rect key="frame" x="311" y="7" width="48" height="30"/>
+                                            <rect key="frame" x="311" y="3" width="48" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Cancel"/>
                                             <connections>
@@ -93,13 +88,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hiq-fh-lfO" secondAttribute="trailing" id="6U9-1A-sNa"/>
+                            <constraint firstItem="Dao-BL-6lP" firstAttribute="top" secondItem="Hiq-fh-lfO" secondAttribute="bottom" id="IKs-bl-Fp4"/>
                             <constraint firstItem="PMP-d3-WDm" firstAttribute="top" secondItem="Dao-BL-6lP" secondAttribute="bottom" constant="-75" id="OHf-fa-FkM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Hiq-fh-lfO" secondAttribute="top" id="QfI-fV-SxJ"/>
                             <constraint firstItem="tkx-s7-90F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WIz-Cp-XBX"/>
-                            <constraint firstItem="Dao-BL-6lP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="b4b-KM-amr"/>
+                            <constraint firstItem="Dao-BL-6lP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b4b-KM-amr"/>
                             <constraint firstItem="Dao-BL-6lP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="bhg-6e-UA1"/>
                             <constraint firstItem="Hiq-fh-lfO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dK2-uK-L2l"/>
-                            <constraint firstItem="9pb-Ug-dDC" firstAttribute="top" secondItem="Dao-BL-6lP" secondAttribute="bottom" constant="25" id="ffu-lQ-OmR"/>
+                            <constraint firstItem="9pb-Ug-dDC" firstAttribute="top" secondItem="Dao-BL-6lP" secondAttribute="bottom" id="ffu-lQ-OmR"/>
                             <constraint firstItem="O6G-qz-dPJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hfp-wM-gow"/>
                             <constraint firstItem="Dao-BL-6lP" firstAttribute="top" secondItem="O6G-qz-dPJ" secondAttribute="bottom" constant="-75" id="hwp-Us-x8t"/>
                             <constraint firstItem="Dao-BL-6lP" firstAttribute="centerX" secondItem="9pb-Ug-dDC" secondAttribute="centerX" id="idh-qb-afh"/>
@@ -115,15 +111,15 @@
                         <outlet property="cameraButton" destination="Qj4-1c-FZN" id="gH1-AI-gZd"/>
                         <outlet property="cancelButton" destination="gIc-cb-ZgZ" id="9Mj-JW-fzI"/>
                         <outlet property="imagePickerView" destination="Dao-BL-6lP" id="e1i-48-j1q"/>
-                        <outlet property="shareButton" destination="zSJ-Rh-uK3" id="qn2-Vb-ksf"/>
+                        <outlet property="shareButton" destination="orx-vN-j2g" id="J7n-R5-QK1"/>
                         <outlet property="toolBar" destination="9pb-Ug-dDC" id="7gk-wc-1Nf"/>
                         <outlet property="topTextField" destination="O6G-qz-dPJ" id="6Gp-8K-1v9"/>
-                        <outlet property="topToolbar" destination="Hiq-fh-lfO" id="rsC-0F-QJj"/>
+                        <outlet property="topToolBar" destination="Hiq-fh-lfO" id="suE-xt-SLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
+            <point key="canvasLocation" x="-356" y="24"/>
         </scene>
     </scenes>
 </document>

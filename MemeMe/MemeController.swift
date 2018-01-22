@@ -21,10 +21,10 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var toolBar: UIToolbar!
-    @IBOutlet weak var topToolbar: UIToolbar!
+    @IBOutlet weak var topToolBar: UIToolbar!
     
     var generatedMemeImage : UIImage? = nil
     
@@ -85,12 +85,10 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func generateMemedImage() -> UIImage {
         //Hide toolbar and navbar
         hideTopAndBottomBars(true)
-        
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        
         //Show toolbar and navbar
         hideTopAndBottomBars(false)
         return memedImage
@@ -139,7 +137,9 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func hideTopAndBottomBars(_ hide: Bool) {
         self.toolBar.isHidden = hide
-        self.shareButton.isHidden = hide
+        self.topToolBar.isHidden = hide
+        self.shareButton.isEnabled = !(hide)
+        self.shareButton.tintColor = UIColor.clear
         self.navigationController?.isNavigationBarHidden = hide
     }
     
