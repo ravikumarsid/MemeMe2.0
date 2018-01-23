@@ -43,13 +43,12 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
         configure(textField: bottomTextField, withText: "BOTTOM")
         self.toolBar.clipsToBounds = true
         subscribeToKeyboardNotifications()
-        shareButton.isEnabled = imagePickerView.image == nil ? false : true
+        shareButton.isEnabled = imagePickerView.image != nil
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        unsubscribeFromKeyboardNotifications(name: .UIKeyboardWillShow)
-        unsubscribeFromKeyboardNotifications(name: .UIKeyboardWillHide)
+        unsubscribeFromKeyboardNotifications()
     }
     
     override func viewDidLoad() {
@@ -76,8 +75,6 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textField.defaultTextAttributes = memeTextAttributes
         textField.delegate = self
         textField.textAlignment = .center
-        textField.backgroundColor = UIColor.clear
-        textField.borderStyle = UITextBorderStyle.none
         textField.text = text
     }
     
@@ -131,15 +128,13 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
     
-    func unsubscribeFromKeyboardNotifications( name: NSNotification.Name ) {
-        NotificationCenter.default.removeObserver(self, name: name, object: nil)
+    func unsubscribeFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func hideTopAndBottomBars(_ hide: Bool) {
         self.toolBar.isHidden = hide
         self.topToolBar.isHidden = hide
-        self.shareButton.isEnabled = !(hide)
-        self.shareButton.tintColor = UIColor.clear
         self.navigationController?.isNavigationBarHidden = hide
     }
     
