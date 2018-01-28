@@ -44,11 +44,13 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.toolBar.clipsToBounds = true
         subscribeToKeyboardNotifications()
         shareButton.isEnabled = imagePickerView.image != nil
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+         self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -68,7 +70,11 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func save() {
-        _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, orignalImage: imagePickerView.image! , memedImage: self.generatedMemeImage!)
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, orignalImage: imagePickerView.image! , memedImage: self.generatedMemeImage!)
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     func configure(textField: UITextField, withText text: String){
@@ -168,7 +174,6 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if !completed {
                 return
             }
-            self.save()
         }
         self.present(controller, animated: true, completion: save)
     }
