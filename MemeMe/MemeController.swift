@@ -50,7 +50,7 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
-         self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -174,12 +174,14 @@ class MemeController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if !completed {
                 return
             }
+            self.save()
         }
-        self.present(controller, animated: true, completion: save)
+        self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func cancelMeme(_ sender: Any) {
         defaultMemeScreen()
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
